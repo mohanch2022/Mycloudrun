@@ -6,5 +6,8 @@ app = Flask(__name__)
 def hello():
     return "Hello from Flask in Docker!"
 
+#if __name__ == '__main__':
+#    app.run(host='0.0.0.0', port=8080)
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(debug=True) # For local development, Gunicorn will replace this in production
